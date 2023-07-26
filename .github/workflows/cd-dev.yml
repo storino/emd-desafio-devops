@@ -1,0 +1,36 @@
+name: "Deploy to Google Cloud Run (Dev)"
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - id: auth
+      uses: google-github-actions/auth@35b0e87d162680511bf346c299f71c9c5c379033
+      with:
+        credentials_json: ${{ secrets.GCP_CREDENTIALS }}
+
+    - name: Set up Cloud SDK
+      uses: google-github-actions/setup-gcloud@e30db14379863a8c79331b04a9969f4c1e225e0b
+
+    - name: Configure Docker to use the gcloud command-line tool as a credential helper
+      run: gcloud auth configure-docker
+
+    - name: Build and Push Docker Image
+      uses: docker/build-push-action@2eb1c1961a95fc15694676618e422e8ba1d63825
+      with:
+        push: true
+        tags: gcr.io/pelagic-program-393417/emd-desafio-devops-dev:latest
+
+    - name: Deploy to Cloud Run
+      uses: google-github-actions/deploy-cloudrun@e62f655d5754bec48078a72edc015367b01ee97b
+      with:
+        image: gcr.io/pelagic-program-393417/emd-desafio-devops-dev:latest
+        service: emd-desafio-devops-dev
+        region: southamerica-east1
+        env_vars: |
+          NAME=Escritório de Dados (Dev)

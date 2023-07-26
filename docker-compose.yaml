@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  flask-api:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    logging:
+      options:
+        max-size: 10m
+        max-file: "3"
+    restart: unless-stopped
+    environment:
+      - NAME=${NAME}
+      - PORT=${PORT}
+      - LOCAL=${LOCAL}
+    ports:
+      - ${PORT}:${PORT}
+    volumes:
+     - ./:/app

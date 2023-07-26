@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Word Art Generator</title>
+    <style>
+        body {
+            background-color: #F1F1F1;
+            color: #1A1A1A;
+            font-family: "Arial", sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-size: 48px;
+            text-shadow: 2px 2px 4px #888888;
+        }
+
+        p {
+            font-size: 24px;
+            text-shadow: 2px 2px 4px #888888;
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <h1>Word Art Generator</h1>
+    <form method="post">
+        <label for="text">Enter your text:</label>
+        <input type="text" id="text" name="text" required><br>
+        <label for="font">Choose a font:</label>
+        <select id="font" name="font" required>
+            {% for font in available_fonts %}
+            <option value="{{ font }}">{{ font }}</option>
+            {% endfor %}
+        </select><br>
+        <input type="submit" value="Generate Word Art">
+    </form>
+    {% if word_art_text %}
+    <pre>
+{{ word_art_text }}
+    </pre>
+    {% endif %}
+</body>
+</html>
