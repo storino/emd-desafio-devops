@@ -1,0 +1,18 @@
+site_name: Desafio DevOps
+repo_url: https://github.com/storino/emd
+repo_name: storino/emd
+edit_uri: tree/main/docs
+
+theme:
+  logo: assets/logo.png
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  name: material
+  language: pt-BR
