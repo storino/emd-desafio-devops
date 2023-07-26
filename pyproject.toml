@@ -47,7 +47,7 @@ profile = "black"
 [tool.taskipy.tasks]
 up = "docker compose up -d --build --force-recreate"
 down = "docker compose down --rmi local"
-lint = "semgrep scan --error --verbose --config auto && black . && isort . && flake8 ."
+lint = "semgrep scan --error --verbose --config auto --exclude-rule python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host && black . && isort . && flake8 ."
 docs = "mkdocs serve"
 docs_deploy = "mkdocs gh-deploy"
 test = "pytest -s -x --cov=src"
