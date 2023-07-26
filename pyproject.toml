@@ -8,11 +8,47 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.9"
 flask = "^2.3.2"
+gunicorn = "^21.2.0"
+pyfiglet = "^0.8.post1"
 
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.7.0"
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+isort = "^5.12.0"
+taskipy = "^1.11.0"
+pre-commit = "^3.3.3"
+python-dotenv = "^1.0.0"
+flake8 = "^6.0.0"
+semgrep = "^1.33.2"
+
+
+[tool.poetry.group.doc.dependencies]
+mkdocs-material = "^9.1.19"
+mkdocstrings = "^0.22.0"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = "."
+addopts = "--doctest-modules"
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+
+[tool.taskipy.tasks]
+up = "docker compose up -d --build --force-recreate"
+down = "docker compose down --rmi local"
+lint = "semgrep scan --error --verbose --config auto --exclude-rule python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host && black . && isort . && flake8 ."
+docs = "mkdocs serve"
+docs_deploy = "mkdocs gh-deploy"
+test = "pytest -s -x --cov=src"
+cov = "coverage html"

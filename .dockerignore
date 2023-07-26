@@ -1,0 +1,8 @@
+# Ignore all
+*
+
+# Include only
+!src/
+!scripts/
+!poetry.lock
+!pyproject.toml
