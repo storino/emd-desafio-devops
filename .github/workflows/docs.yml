@@ -9,8 +9,8 @@ jobs:
   docs:
     name: Docs
     runs-on: ubuntu-latest
-    env:
-      # GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+    # env:
+    #   GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
     steps:
       - name: Checkout code
         uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5
