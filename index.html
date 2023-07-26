@@ -1,0 +1,639 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="app/">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+    
+    
+      
+        <title>Desafio DevOps</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#documentacao-das-tarefas" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="." title="Desafio DevOps" class="md-header__button md-logo" aria-label="Desafio DevOps" data-md-component="logo">
+      
+  <img src="assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Desafio DevOps
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Documentação das Tarefas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/storino/emd" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    storino/emd
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Desafio DevOps" class="md-nav__button md-logo" aria-label="Desafio DevOps" data-md-component="logo">
+      
+  <img src="assets/logo.png" alt="logo">
+
+    </a>
+    Desafio DevOps
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/storino/emd" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    storino/emd
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Documentação das Tarefas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Documentação das Tarefas
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tarefa-1-variavel-de-ambiente" class="md-nav__link">
+    Tarefa 1: Variável de Ambiente
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarefa-2-gitignore" class="md-nav__link">
+    Tarefa 2: .gitignore
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarefa-3-fluxo-de-desenvolvimento" class="md-nav__link">
+    Tarefa 3: Fluxo de Desenvolvimento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarefa-4-boas-praticas-no-repositorio" class="md-nav__link">
+    Tarefa 4: Boas Práticas no Repositório
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarefa-5-ambiente-de-producao" class="md-nav__link">
+    Tarefa 5: Ambiente de Produção
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarefa-6-containerizacao" class="md-nav__link">
+    Tarefa 6: Containerização
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarefa-7-desenvolvimento-local" class="md-nav__link">
+    Tarefa 7: Desenvolvimento Local
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarefa-8-cicd" class="md-nav__link">
+    Tarefa 8: CI/CD
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="app/" class="md-nav__link">
+        Documentação da Aplicação
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tarefa-1-variavel-de-ambiente" class="md-nav__link">
+    Tarefa 1: Variável de Ambiente
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarefa-2-gitignore" class="md-nav__link">
+    Tarefa 2: .gitignore
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarefa-3-fluxo-de-desenvolvimento" class="md-nav__link">
+    Tarefa 3: Fluxo de Desenvolvimento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarefa-4-boas-praticas-no-repositorio" class="md-nav__link">
+    Tarefa 4: Boas Práticas no Repositório
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarefa-5-ambiente-de-producao" class="md-nav__link">
+    Tarefa 5: Ambiente de Produção
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarefa-6-containerizacao" class="md-nav__link">
+    Tarefa 6: Containerização
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarefa-7-desenvolvimento-local" class="md-nav__link">
+    Tarefa 7: Desenvolvimento Local
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarefa-8-cicd" class="md-nav__link">
+    Tarefa 8: CI/CD
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="documentacao-das-tarefas">Documentação das Tarefas</h1>
+<h3 id="tarefa-1-variavel-de-ambiente">Tarefa 1: Variável de Ambiente</h3>
+<p><strong>Modificar a aplicação para consumir uma variável de ambiente chamada <code>NAME</code> e, no lugar de "World", exibir o valor dessa variável.</strong></p>
+<p>Para a aplicação consumir a variável de ambiente <code>NAME</code>, basta usar o módulo <code>os</code> nativo do Python. O método <code>os.environ.get()</code> recebe duas strings de argumento. A primeira refere-se ao nome da variável de ambiente. Se ela existir, então a função retorna seu valor, senão, retorna o segundo argumento passado.</p>
+<pre><code>@app.route("/")
+def hello_world():
+name = os.environ.get("NAME", "World")
+return f"Hello, {name}!"
+</code></pre>
+<h3 id="tarefa-2-gitignore">Tarefa 2: .gitignore</h3>
+<p><strong>Modificar o arquivo <code>.gitignore</code> para que seja adequado a uma aplicação Python.</strong></p>
+<p>No arquivo <code>.gitignore</code>, faz-se referência a arquivos/diretórios com as seguintes características:</p>
+<ul>
+<li>Arquivos otimizados / binários</li>
+<li>Ambientes virtuais Python (<code>venv</code>)</li>
+<li>Arquivos específicos do IDE</li>
+<li>Arquivos de Log</li>
+</ul>
+<p>entre outros.</p>
+<h3 id="tarefa-3-fluxo-de-desenvolvimento">Tarefa 3: Fluxo de Desenvolvimento</h3>
+<p><strong>Elaborar, implementar e reforçar o fluxo de desenvolvimento do repositório.</strong></p>
+<p>Sugestão de fluxo de desenvolvimento com o seguinte padrão de criação/merge de branches:</p>
+<ul>
+<li>
+<p>Branches Principais:</p>
+<ul>
+<li><code>master</code>: Representa a versão estável e pronta para produção da aplicação.</li>
+<li><code>develop</code>: Serve como branch de integração para o desenvolvimento contínuo.</li>
+</ul>
+</li>
+<li>
+<p>Branches de Funcionalidades:</p>
+<ul>
+<li>Para cada nova funcionalidade ou tarefa, crie uma nova branch a partir da <code>develop</code>.</li>
+<li>Dê um nome descritivo à branch de funcionalidade, como <code>feature/user-authentication</code>.</li>
+</ul>
+</li>
+<li>
+<p>Hotfix:</p>
+<ul>
+<li>Se houver um bug crítico na versão de produção, crie uma branch de Hotfix a partir da <code>master</code>.</li>
+<li>Dê um nome descritivo à branch de Hotfix, como <code>hotfix/fix-login-issue</code>.</li>
+</ul>
+</li>
+<li>
+<p>Branches de Lançamento (Release):</p>
+<ul>
+<li>Quando a branch <code>develop</code> atingir um ponto estável para um lançamento, crie uma branch de release a partir dela.</li>
+<li>Dê um nome da branch com base no número da versão, como <code>release/1.0</code>.</li>
+</ul>
+</li>
+<li>
+<p>Merging:</p>
+<ul>
+<li>Faça merge nas branches de funcionalidades de volta à <code>develop</code> assim que as funcionalidades estiverem concluídas e testadas.</li>
+<li>Faça merge nas branches de release tanto na <code>develop</code> quanto na <code>master</code> após testar e garantir a estabilidade.</li>
+<li>Faça merge nas branches de Hotfix tanto no <code>develop</code> quanto no <code>master</code> para aplicar correções críticas à versão de produção.</li>
+<li>Sempre usar <em>Pull Requests</em> para as branches principais (branches protegidas).</li>
+</ul>
+</li>
+<li>
+<p>Tagging:</p>
+<ul>
+<li>Sempre que dar merge numa branch de release na <code>master</code>, crie uma tag para a versão específica. Isso facilita o rastreamento dos lançamentos.</li>
+</ul>
+</li>
+</ul>
+<p>Mensagens de commits devem deve ser estruturada seguindo o padrão <a href="https://www.conventionalcommits.org/en/v1.0.0/">Conventional Commits</a> <code>v1.0.0</code>:</p>
+<p>A especificação Conventional Commits fornece um conjunto simples de regras para criar um histórico de commits explícito, o que facilita a escrita de ferramentas automatizadas por cima dele. Essa convenção se alinha com o SemVer, descrevendo as funcionalidades, correções e mudanças que quebram compatibilidade presentes nas mensagens de commit.</p>
+<pre><code>&lt;tipo&gt;[escopo opcional]: &lt;descrição&gt;
+
+[corpo opcional]
+
+[rodapé(s) opcional(is)]
+</code></pre>
+<h3 id="tarefa-4-boas-praticas-no-repositorio">Tarefa 4: Boas Práticas no Repositório</h3>
+<p><strong>Consolidar boas práticas no repositório através de ferramentas de análise estática, hooks de pré-commit, etc. a seu critério.</strong></p>
+<p>Foram usadas as seguintes ferramentas com o intuito de consolidar boas práticas no repositório:</p>
+<ul>
+<li><strong>Poetry</strong>: ferramenta de gerenciamento de dependências e empacotamento de projetos Python. Com <code>poetry.lock</code> garante um snapshot das dependencias podendo ser facilmente replicado em outras instâncias.</li>
+<li><strong>Semgrep</strong>:  ferramenta de análise estática de código que permite encontrar e corrigir problemas de segurança, bugs e más práticas em seus projetos de código-fonte. Ele usa regras de análise baseadas em padrões e expressões regulares para identificar possíveis vulnerabilidades e problemas no código.</li>
+<li><strong>Black</strong>: garante que o código siga um estilo de formatação consistente e padronizado, tornando-o mais legível e mantendo uma aparência uniforme em projetos compartilhados por várias pessoas.</li>
+<li><strong>Isort</strong>: ferramenta de ordenação de importações em código fonte Python. Ele reorganiza as declarações de importação em ordem alfabética e agrupa-as de forma coerente, tornando o código mais organizado.</li>
+<li><strong>Flake8</strong>: combina várias ferramentas populares, como o PyFlakes (verificador de erros estáticos) e o pycodestyle (verificador de conformidade de estilo PEP 8), além de verificar a complexidade do código com o mccabe. O Flake8 ajuda a identificar problemas potenciais no código, como erros de sintaxe, problemas de estilo e complexidade excessiva.</li>
+<li><strong>MKDocs</strong>: ferramenta de criação de documentação estática em Markdown. Ele possui várias facilidades como o comando <code>mkdocs serve</code> que inicia um servidor local em que você pode visualizar a documentação no navegador em tempo real enquanto faz alterações no conteúdo ou no estilo. Além do comando <code>mkdocs gh-deploy</code>, que compila a documentação e a implanta na branch "gh-pages" do repositório do GitHub, tornando-a publicamente acessível em um URL específico do GitHub Pages.</li>
+<li><strong>PyTest</strong>: oferece recursos poderosos, como detecção automática de testes e testes parametrizados. Com PyTest-cov foi possível intregá-lo com a ferramente descrita a seguir.</li>
+<li><strong>Coverage</strong>: com essa ferramenta é possível medir a cobertura de código do projeto, ou seja, quantas linhas de código foram executadas durante a execução dos testes. Com o comando <code>coverage html</code> ele gera uma aplicação web local (hospedada por padrão na porta <code>8000</code>) contendo relatórios detalhados que mostram quais partes do código não foram cobertas pelos testes.</li>
+<li>
+<p><strong>TaskiPy</strong>: diminui o quanto digitamos para usar as ferramentas que foram descritas até então. A ideia é definir as tarefas numa sessão do <code>pyproject.toml</code>, e estas são executadas com um comando simples (<code>task &lt;nome do comando&gt;</code>).</p>
+<pre><code>[tool.taskipy.tasks]
+...
+lint = "semgrep scan --verbose --config auto &amp;&amp; black . &amp;&amp; isort . &amp;&amp; flake8 ."
+docs = "mkdocs serve"
+docs_deploy = "mkdocs gh-deploy"
+test = "pytest -s -x --cov=src"
+cov = "coverage html"
+</code></pre>
+</li>
+<li>
+<p><strong>pre-commit</strong>: permite configurar <em>pre-commit hooks</em> que são executados antes de um commit ser realizado. Neste caso, foi incluido a <code>task test</code> definido com o Taskipy além da checagem estática com o semgrep, black, isort e flake8, além de verificar marcador de ordem de byte UTF-8, corrigir pragma de codificação do Python, remover espaços em branco no final de cada linha, não permitir fazer commit em branches protegidas e verificar se arquivos grandes foram adicionados.</p>
+</li>
+<li>
+<p><strong>Code Owners</strong>: recurso que permite atribuir revisores específicos para determinados arquivos ou pastas em um repositório do GitHub. Ao definir um arquivo CODEOWNERS na pasta .github, é especificado os proprietários responsáveis por revisar e aprovar as alterações em determinados caminhos do código-fonte. Neste projeto exemplo, apenas meu usuário foi definido como revisor Default de todas as mudanças.</p>
+</li>
+</ul>
+<h3 id="tarefa-5-ambiente-de-producao">Tarefa 5: Ambiente de Produção</h3>
+<p><strong>Preparar a aplicação para que seja production-ready.</strong></p>
+<p>Embora o Flask seja um excelente framework para criar aplicativos web em Python de forma rápida e simples, ele não é considerado "production ready" por si só. O servidor embutido no Flask é adequado apenas para fins de desenvolvimento e testes. Ele não é projetado para lidar com cargas de tráfego significativas ou oferecer recursos de alta disponibilidade.</p>
+<p>Com isso, foi escolhido o <strong>Guonicorn</strong> (Green Unicorn) como ferramenta para tal: um servidor HTTP WSGI (Web Server Gateway Interface) que permite que a aplicação atenda a mais solicitações ao mesmo tempo.</p>
+<h3 id="tarefa-6-containerizacao">Tarefa 6: Containerização</h3>
+<p><strong>Criar arquivos e scripts para que a aplicação possa ser executada em um container.</strong></p>
+<p>Foi criado um <strong>Dockerfile</strong> que copia somente os arquivos necessários para que o container instale as dependências do projeto (<code>poetry.lock</code> e <code>pyproject.toml</code>), e rode a aplicação (conteúdo do diretório <code>src/</code>). Isso é feito com o auxílio de um arquivo <code>.dockerignore</code>.</p>
+<p>Como <code>ENTRYPOINT</code>, o container executa o script <code>scope.sh</code> que roda a aplicação com o servidor do próprio flask caso exista uma variável de ambiente <code>LOCAL=True</code> . Caso contrário, o Guonicorn é usado.</p>
+<h3 id="tarefa-7-desenvolvimento-local">Tarefa 7: Desenvolvimento Local</h3>
+<p><strong>Elaborar um modelo de desenvolvimento que permita a execução da aplicação em um ambiente de desenvolvimento local.</strong></p>
+<p>O modo Debug do Flask, além de fornecer informações detalhadas sobre erros e exceções que ocorrem durante a execução, também ativará o recurso de "auto-reload", que fará com que a aplicação seja recarregada automaticamente sempre que ocorrer uma alteração no código.</p>
+<p>Com um arquivo <code>docker-compose.yml</code>, definimos a criação de um container na nossa máquina local que terá a variável de ambiente <code>LOCAL=True</code>, que ativa o modo Debug do Flask e roda a aplicação sem o Guonicorn.</p>
+<p>Além disso, é usado um Volume mapeando o repositório local ao diretório da aplicação no container. Com isso, toda modificação do código fonte também é alterado dentro do container, e com a função DEBUG, podemos ver as modificações sem precisar rebuildar a imagem.</p>
+<p>Para subir o container localmente, basta usar a task definida no Taskipy <code>task up</code> (subir o container) <code>task down</code> (parar)</p>
+<pre><code>[tool.taskipy.tasks]
+up = "docker compose up -d --build --force-recreate"
+down = "docker compose down --rmi local"
+</code></pre>
+<h3 id="tarefa-8-cicd">Tarefa 8: CI/CD</h3>
+<p><strong>Construir pipelines de CI/CD para a aplicação utilizando GitHub Actions. Esse item possui forte relação com o fluxo de desenvolvimento, pois deve compreender o deployment em dois ambientes diferentes: homologação e produção. O deployment da aplicação deve ser realizado em um serviço serverless da Google Cloud Platform.</strong></p>
+<p>GitHub Actions é um serviço de automação oferecido pelo GitHub para facilitar a criação de fluxos de trabalho automatizados. Por meio de arquivos yaml na pasta <code>.github/workflow</code> do repositório, pode-se definir e configurar tarefas personalizadas que são acionadas por eventos, como push de código, abertura de pull requests ou outros eventos do repositório.</p>
+<ul>
+<li>
+<p><strong>docs.yml</strong>: com todo "push" na <code>main</code> (apenas por meio de um <em>Pull Request</em> aceito) o site de documentação gerado pelo MKDocs é implantada na plataforma GitHub Actions.</p>
+</li>
+<li>
+<p><strong>lint.yml</strong>: com todo <em>Pull Request</em>, a task de "lint code" com as ferramentas Semgrep para seguir boas práticas de segurança e Black, Isort e Flak8 para garantir a boa formatação do código Python. Além da ferramente hadolint, por meio de uma action para a devida formatação do Dockerfile seguindo especificações formais.</p>
+</li>
+<li>
+<p><strong>cd.yml</strong>: com todo "push" na <code>main</code> (apenas por meio de um <em>Pull Request</em> aceito) a imagem Docker da aplicação é buildada para o Container Registry da Google, e depois é implantada no Google Run. A autorização é feita passando a Json Service Account Access Key por meio de um secret do repositório. Além disso, há um arquivo <code>cd-dev.yml</code> seguindo o mesmo fluxo, mas para a implantação de homologação.</p>
+<p>Obs: A recomendação da Cloud Run é que os sistemas de CI/CD não definam nem alterem configurações para permitir "invocações" não autenticadas. Novas implantações são automaticamente configuradas como serviços privados, enquanto a implantação de uma revisão de um serviço público (não autenticado) preservará a configuração de IAM como pública (não autenticada). Sendo assim, depois da primeira implantação, deve-se realizar o seguinte comando num ambiente com autenticação para deixar a aplicação de produção pública.</p>
+<pre><code>gcloud run services add-iam-policy-binding [SERVICE_NAME] \
+    --member="allUsers" \
+    --role="roles/run.invoker"
+</code></pre>
+</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>
